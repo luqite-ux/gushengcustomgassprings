@@ -1,25 +1,26 @@
 /** @type {import('next').NextConfig} */
-const adminOrigin = (
+const adminUrl = (
   process.env.NEXT_PUBLIC_ADMIN_URL ||
   process.env.HUANQIU_ADMIN_ORIGIN ||
   'https://admin.globle-trade.com'
-).replace(/\/$/, '')
+)
+  .trim()
+  .replace(/[\r\n]/g, '')
+  .replace(/\/$/, '')
 
 const nextConfig = {
   images: {
     unoptimized: true,
   },
   async rewrites() {
-    return [
-      {
-        source: '/admin',
-        destination: `${adminOrigin}/admin`,
-      },
-      {
-        source: '/admin/:path*',
-        destination: `${adminOrigin}/admin/:path*`,
-      },
-    ]
+    if (!adminUrl) return []
+    return {
+      afterFiles: [
+        { source: '/admin', destination: `${adminUrl}/admin` },
+        { source: '/admin/:path*', destination: `${adminUrl}/admin/:path*` },
+        { source: '/api/admin/:path*', destination: `${adminUrl}/api/admin/:path*` },
+      ],
+    }
   },
 }
 
