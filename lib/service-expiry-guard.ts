@@ -2,14 +2,18 @@ export const GUARD_VERSION = '2026-10-01'
 export const SERVICE_STATUS_PROTOCOL_VERSION = 1
 
 const TENANT_ID = process.env.NEXT_PUBLIC_TENANT_ID || '9ea0ebb9-3f79-4281-953a-854b1ebb5e4a'
-const ADMIN_ORIGIN = (process.env.HUANQIU_ADMIN_ORIGIN || 'https://huanqiu-admin.vercel.app').replace(/\/$/, '')
+const ADMIN_ORIGIN = (
+  process.env.NEXT_PUBLIC_ADMIN_URL ||
+  process.env.HUANQIU_ADMIN_ORIGIN ||
+  'https://admin.globle-trade.com'
+).replace(/\/$/, '')
 
-export function isExemptPath(pathname: string): boolean {
+export function isServiceGuardExcludedPath(pathname: string): boolean {
   return (
     pathname === '/admin' ||
     pathname.startsWith('/admin/') ||
-    pathname.startsWith('/api/') ||
-    pathname.startsWith('/_next/') ||
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next') ||
     pathname === '/service-expired' ||
     pathname === '/favicon.ico' ||
     pathname === '/icon.png' ||
@@ -20,24 +24,25 @@ export function isExemptPath(pathname: string): boolean {
   )
 }
 
-export async function shouldBlockForServiceExpiry(): Promise<boolean> {
-  if (!TENANT_ID || !ADMIN_ORIGIN) return false
-  const controller = new AbortController()
-  const timer = setTimeout(() => controller.abort(), 2500)
+export async function isWebsiteServiceAvailable(): Promise<boolean> {
+  if (!TENANT_ID || !ADMIN_ORIGIN) return true
   try {
-    const res = await fetch(`${ADMIN_ORIGIN}/api/public/service-status/${encodeURIComponent(TENANT_ID)}`, {
-      signal: controller.signal,
-      headers: { Accept: 'application/json' },
-      cache: 'no-store',
-    })
-    if (!res.ok) return false
+    const res = await fetch(
+      `${ADMIN_ORIGIN}/api/public/service-status/${encodeURIComponent(TENANT_ID)}`,
+      {
+        signal: AbortSignal.timeout(2500),
+        headers: { Accept: 'application/json' },
+        cache: 'no-store',
+      }
+    )
+    if (!res.ok) return true
     const data = await res.json()
-    if (!data || data.protocol_version !== SERVICE_STATUS_PROTOCOL_VERSION) return false
-    if (!data.enforcement_enabled || !data.guard_version || !data.expires_on) return false
-    return data.expired === true
+    if (!data || data.version !== SERVICE_STATUS_PROTOCOL_VERSION) return true
+    if (data.available === false && data.status === 'expired') {
+      return false
+    }
+    return true
   } catch {
-    return false
-  } finally {
-    clearTimeout(timer)
+    return true
   }
 }
