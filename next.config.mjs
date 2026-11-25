@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
-const ADMIN_ORIGIN = (process.env.HUANQIU_ADMIN_ORIGIN || 'https://huanqiu-admin.vercel.app').replace(/\/$/, '')
+const adminOrigin = (
+  process.env.NEXT_PUBLIC_ADMIN_URL ||
+  process.env.HUANQIU_ADMIN_ORIGIN ||
+  'https://admin.globle-trade.com'
+).replace(/\/$/, '')
 
 const nextConfig = {
   images: {
@@ -9,11 +13,11 @@ const nextConfig = {
     return [
       {
         source: '/admin',
-        destination: `${ADMIN_ORIGIN}/admin`,
+        destination: `${adminOrigin}/admin`,
       },
       {
         source: '/admin/:path*',
-        destination: `${ADMIN_ORIGIN}/admin/:path*`,
+        destination: `${adminOrigin}/admin/:path*`,
       },
     ]
   },
