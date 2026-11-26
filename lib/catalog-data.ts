@@ -167,7 +167,7 @@ export const CERTIFICATES = [
     badge: 'ENTERPRISE HONOR',
     title: '2020 Integrity Management Advanced Enterprise',
     code: 'Credit Code: 91320404582271686K',
-    holder: 'Changzhou Gusheng Hardware Co., Ltd. (常州市顾盛五金有限公司)',
+    holder: 'Changzhou Gusheng Hardware Co., Ltd.',
     issuer: 'Enterprise Credit Recognition Program (2020)',
     scope: 'Honorary credential recognizing Changzhou Gusheng Hardware Co., Ltd. for integrity-driven manufacturing operations and reliable contract fulfillment.',
     image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/certificates/honor-integrity-2020-c1b4f454c0.jpg',
