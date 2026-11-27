@@ -49,6 +49,8 @@ export function SiteHeader() {
           <img
             src={R2_ASSETS.logo}
             alt="GUSHENG GAS SPRINGS Logo"
+            decoding="async"
+            fetchPriority="high"
             className="h-11 w-auto max-w-[130px] object-contain"
           />
         </Link>

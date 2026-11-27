@@ -20,6 +20,8 @@ export function ProductGallery({ name, images }: ProductGalleryProps) {
             <img
               src={current}
               alt={`${name} — view ${activeIdx + 1}`}
+              decoding="async"
+              fetchPriority="high"
               className="h-full w-full object-cover transition-transform duration-500 hover:scale-[1.03]"
             />
           ) : (
@@ -45,7 +47,13 @@ export function ProductGallery({ name, images }: ProductGalleryProps) {
                   : 'border-border opacity-75 hover:opacity-100'
               }`}
             >
-              <img src={img} alt={`${name} thumbnail ${idx + 1}`} className="h-full w-full object-cover" />
+              <img
+                src={img}
+                alt={`${name} thumbnail ${idx + 1}`}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
             </button>
           ))}
         </div>

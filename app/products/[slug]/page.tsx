@@ -265,7 +265,13 @@ export default async function ProductDetailPage({
                     className="lift flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-xs"
                   >
                     <div className="aspect-[4/3] w-full overflow-hidden bg-mist">
-                      <img src={item.image_url} alt={item.name} className="h-full w-full object-cover" />
+                      <img
+                        src={item.image_url}
+                        alt={item.name}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover"
+                      />
                     </div>
                     <div className="flex flex-1 flex-col p-5">
                       <span className="font-mono text-[11px] font-semibold text-cobalt">{item.model}</span>

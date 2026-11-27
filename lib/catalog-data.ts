@@ -1,11 +1,11 @@
 export const R2_ASSETS = {
-  logo: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/brand/gusheng-logo-ae2ac4f1aa.png',
+  logo: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/brand/gusheng-logo-ae2ac4f1aa-opt.webp',
   banners: [
     'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/banners/banner-1-03f2a716bb.jpg',
     'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/banners/banner-2-953f220c8c.jpg',
     'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/banners/banner-3-780193980d.jpg',
   ],
-  manifoldDiagram: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/flange-mounted-gas-spring-assembly/gallery-2-425e538f49.png',
+  manifoldDiagram: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/flange-mounted-gas-spring-assembly/gallery-2-425e538f49-opt.webp',
 } as const
 
 export interface HeroSlide {
@@ -74,7 +74,7 @@ export const CATEGORY_ENTRIES = [
     summary: '170–9,500 daN · 11 standard models · In-stock ready',
     forceRange: '170 – 9,500 daN',
     strokeRange: '7 – 125 mm',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb-series-standard-nitrogen-gas-spring/cover-60405658b1.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb-series-standard-nitrogen-gas-spring/cover-60405658b1-opt.webp',
   },
   {
     slug: 'gh-gs-gu-series-gas-springs',
@@ -82,7 +82,7 @@ export const CATEGORY_ENTRIES = [
     summary: 'ISO Standard & Super High-Force up to 18,400 daN',
     forceRange: '250 – 18,400 daN',
     strokeRange: '6 – 300 mm',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gu-series-super-high-force-gas-spring/cover-3b867596c6.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gu-series-super-high-force-gas-spring/cover-3b867596c6-opt.webp',
   },
   {
     slug: 'custom-non-standard-gas-springs',
@@ -90,7 +90,7 @@ export const CATEGORY_ENTRIES = [
     summary: 'Extended strokes, threaded bodies & custom rods by drawing',
     forceRange: 'Custom Calibrated',
     strokeRange: 'Extended / Custom',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/custom-extended-stroke-gas-spring/cover-b4d63847a5.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/custom-extended-stroke-gas-spring/cover-b4d63847a5-opt.webp',
   },
   {
     slug: 'cylinder-barrels-mounting-accessories',
@@ -98,7 +98,7 @@ export const CATEGORY_ENTRIES = [
     summary: 'GB9500-100 barrels, FA/FB/FC mounts & manifold plates',
     forceRange: 'High-Pressure Alloy',
     strokeRange: 'FA / FB / FC Mounts',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/flange-mounted-gas-spring-assembly/cover-374611eb6b.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/flange-mounted-gas-spring-assembly/cover-374611eb6b-opt.webp',
   },
 ] as const
 
