@@ -31,7 +31,7 @@ export function HeroCarousel() {
     >
       {/* Desktop: Full-bleed edge-to-edge composition with zero side white bars; Mobile 390px: clean image top + legible card below */}
       <div className="relative w-full">
-        <div className="relative aspect-[16/9] w-full overflow-hidden bg-mist sm:aspect-[21/9] lg:h-[600px] lg:aspect-auto">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-mist sm:aspect-[21/9] lg:h-[600px] lg:aspect-auto xl:h-[660px] 2xl:h-[720px]">
           {HERO_SLIDES.map((s, idx) => (
             <img
               key={s.id}
@@ -44,15 +44,15 @@ export function HeroCarousel() {
             />
           ))}
 
-          {/* Minimal localized readability scrim ONLY on the designated copy side on desktop */}
+          {/* Tight localized readability scrim ONLY behind the copy zone so product subjects remain 100% crisp */}
           <div
             aria-hidden="true"
             className={`pointer-events-none absolute inset-0 hidden lg:block ${
               isDarkBg
-                ? 'bg-gradient-to-r from-[#071832]/82 via-[#071832]/40 to-transparent'
+                ? 'bg-[linear-gradient(to_right,rgba(7,24,50,0.68)_0%,rgba(7,24,50,0.28)_30%,rgba(7,24,50,0)_48%)]'
                 : slide.copySide === 'right'
-                ? 'bg-gradient-to-l from-white/92 via-white/60 to-transparent'
-                : 'bg-gradient-to-r from-white/92 via-white/60 to-transparent'
+                ? 'bg-[linear-gradient(to_left,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.32)_28%,rgba(255,255,255,0)_44%)]'
+                : 'bg-[linear-gradient(to_right,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0.32)_28%,rgba(255,255,255,0)_44%)]'
             }`}
           />
 
@@ -66,22 +66,22 @@ export function HeroCarousel() {
               <span
                 className={`inline-flex items-center rounded-full border px-3 py-1 font-mono text-[11px] font-semibold tracking-wider uppercase ${
                   isDarkBg
-                    ? 'border-white/25 bg-white/10 text-sky-200 backdrop-blur-sm'
-                    : 'border-cobalt/20 bg-white/90 text-cobalt shadow-xs'
+                    ? 'border-white/30 bg-[#071832]/45 text-sky-200 backdrop-blur-xs'
+                    : 'border-cobalt/25 bg-white/95 text-cobalt shadow-xs'
                 }`}
               >
                 {slide.eyebrow}
               </span>
               <h1
                 className={`mt-4 text-4xl font-semibold tracking-tight text-balance xl:text-5xl xl:leading-[1.12] ${
-                  isDarkBg ? 'text-white' : 'text-ink'
+                  isDarkBg ? 'text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]' : 'text-ink'
                 }`}
               >
                 {slide.headline}
               </h1>
               <p
                 className={`mt-4 text-base leading-relaxed text-pretty ${
-                  isDarkBg ? 'text-slate-100/95' : 'text-steel'
+                  isDarkBg ? 'text-white/92' : 'text-slate-700'
                 }`}
               >
                 {slide.supporting}
@@ -98,8 +98,8 @@ export function HeroCarousel() {
                   href={slide.secondaryCta.href}
                   className={`press inline-flex items-center gap-2 rounded-full border px-5 py-3 text-sm font-medium transition-colors ${
                     isDarkBg
-                      ? 'border-white/35 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20'
-                      : 'border-border bg-white/95 text-ink hover:border-cobalt/40 hover:text-cobalt'
+                      ? 'border-white/40 bg-[#071832]/40 text-white backdrop-blur-xs hover:bg-white/20'
+                      : 'border-slate-300 bg-white text-ink shadow-xs hover:border-cobalt/50 hover:text-cobalt'
                   }`}
                 >
                   {slide.secondaryCta.label}
