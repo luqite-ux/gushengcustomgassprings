@@ -73,7 +73,7 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORY_ENTRIES.map((cat, idx) => (
               <Link
                 key={cat.slug}
@@ -128,7 +128,7 @@ export default async function HomePage() {
               href="/products"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-cobalt hover:underline"
             >
-              View All {allProducts.length || 11} Products
+              View All {allProducts.length || 6} Products
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

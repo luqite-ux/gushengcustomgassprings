@@ -77,14 +77,6 @@ export const CATEGORY_ENTRIES = [
     image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb-series-standard-nitrogen-gas-spring/cover-60405658b1-opt.webp',
   },
   {
-    slug: 'gh-gs-gu-series-gas-springs',
-    shortTitle: 'GH / GS / GU Industrial Series',
-    summary: 'ISO Standard & Super High-Force up to 18,400 daN',
-    forceRange: '250 – 18,400 daN',
-    strokeRange: '6 – 300 mm',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gu-series-super-high-force-gas-spring/cover-3b867596c6-opt.webp',
-  },
-  {
     slug: 'custom-non-standard-gas-springs',
     shortTitle: 'Custom Non-Standard Springs',
     summary: 'Extended strokes, threaded bodies & custom rods by drawing',
@@ -94,11 +86,11 @@ export const CATEGORY_ENTRIES = [
   },
   {
     slug: 'cylinder-barrels-mounting-accessories',
-    shortTitle: 'Cylinder Barrels & Flanges',
-    summary: 'GB9500-100 barrels, FA/FB/FC mounts & manifold plates',
+    shortTitle: 'GB9500-100 Cylinder Barrels & Flanges',
+    summary: 'GB9500-100 cylinder barrel, heavy-duty assemblies & FA/FB/FC mounts',
     forceRange: 'High-Pressure Alloy',
     strokeRange: 'FA / FB / FC Mounts',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/flange-mounted-gas-spring-assembly/cover-374611eb6b-opt.webp',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb9500-100-precision-cylinder-barrel/cover-0cfe069a65-opt.webp',
   },
 ] as const
 
@@ -292,7 +284,7 @@ export const APPLICATIONS_CASES = [
     title: 'High-Tonnage Automotive Draw & Stamping Dies',
     summary: 'Stable initial blank-holder force (up to 18,400 daN) eliminates sheet-metal springback and wrinkling across deep-draw fenders, door panels, and structural reinforcements.',
     recommended: 'GB6600, GB9500, GU11800, GU18300',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb9500-100-heavy-duty-gas-spring/gallery-1-f0c31406b3.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/trimmed-v2/app-automotive-stamping-trim-v2.webp',
   },
   {
     id: 'progressive-dies',
@@ -300,7 +292,7 @@ export const APPLICATIONS_CASES = [
     title: 'Compact Progressive & Piercing Tooling',
     summary: 'Ultra-compact GB and GH profiles deliver high stripping force inside tight die pockets without coil-spring chatter, engineered for 1,000,000+ cycles at high press speeds.',
     recommended: 'GB170–GB1500, GH300–GH1500, Threaded-Body Custom',
-    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/products/gb-series-standard-nitrogen-gas-spring/gallery-1-536bcb5243.jpg',
+    image: 'https://pub-c7a22068052144a5805830c30d280128.r2.dev/site-assets/gushengcustomgassprings/trimmed-v2/app-progressive-dies-trim-v2.webp',
   },
   {
     id: 'injection-molding',

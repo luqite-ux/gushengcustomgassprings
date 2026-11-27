@@ -5,9 +5,9 @@ import { getCachedCategories, getCachedProducts, getCanonicalOrigin } from '@/li
 export const revalidate = 300
 
 export const metadata: Metadata = {
-  title: 'Nitrogen Gas Spring Products | GB, GH, GS, GU & Custom Series',
+  title: 'Nitrogen Gas Spring Products | GB Series, Custom Springs & Cylinder Barrels',
   description:
-    'Browse all 11 standard and custom nitrogen gas spring products from Changzhou Gusheng Hardware Co., Ltd. — GB, GH, GS, GU series, custom non-standard springs, barrels, and mounting flanges.',
+    'Browse standard and custom nitrogen gas spring products from Changzhou Gusheng Hardware Co., Ltd. — GB series, custom non-standard springs, and GB9500-100 cylinder barrels.',
   alternates: { canonical: `${getCanonicalOrigin()}/products` },
 }
 

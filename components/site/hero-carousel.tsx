@@ -29,8 +29,8 @@ export function HeroCarousel() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {/* Desktop: Full-bleed adaptive safe-area composition; Mobile 390px: clean image top + legible card below */}
-      <div className="relative mx-auto max-w-[1600px]">
+      {/* Desktop: Full-bleed edge-to-edge composition with zero side white bars; Mobile 390px: clean image top + legible card below */}
+      <div className="relative w-full">
         <div className="relative aspect-[16/9] w-full overflow-hidden bg-mist sm:aspect-[21/9] lg:h-[600px] lg:aspect-auto">
           {HERO_SLIDES.map((s, idx) => (
             <img
