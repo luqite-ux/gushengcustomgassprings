@@ -75,7 +75,7 @@ export function ProductsCatalog({ categories, products }: ProductsCatalogProps) 
             Nitrogen Gas Springs &amp; Precision Components
           </h1>
           <p className="mt-4 max-w-3xl text-base text-steel">
-            Complete range of standard GB, GH, GS, and GU nitrogen gas springs (170–18,400 daN), drawing-to-sample custom non-standard units, high-pressure cylinder barrels, and FA/FB/FC mounting flanges.
+            Complete range of standard GB nitrogen gas springs (170–9,500 daN), drawing-to-sample custom non-standard units, and GB9500-100 high-pressure cylinder barrels with FA/FB/FC mounting options.
           </p>
 
           {/* Category Filter Pills (Client-side instant switching) */}

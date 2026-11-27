@@ -61,7 +61,7 @@ export default async function HomePage() {
                 PRODUCT ARCHITECTURE
               </p>
               <h2 className="mt-2 text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-                Four Core Nitrogen Gas Spring Series &amp; Custom Engineering
+                Core Nitrogen Gas Spring Series &amp; Custom Engineering
               </h2>
             </div>
             <Link
