@@ -20,7 +20,7 @@ export function CrossReferenceFinder({ compact = false }: CrossReferenceFinderPr
       if (!q) return true
       return Object.values(r).some((v) => String(v).toLowerCase().includes(q))
     })
-    return compact && !q && seriesFilter === 'ALL' ? rows.slice(0, 10) : rows
+    return compact && !q && seriesFilter === 'ALL' ? rows.slice(0, 11) : rows
   }, [query, seriesFilter, compact])
 
   return (
